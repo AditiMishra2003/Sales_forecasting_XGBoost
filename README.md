@@ -20,31 +20,47 @@ RMSE: 737.00
 2.Relative RMSE ≈ 40% of average → indicates room for improvement.
 
 ## ✅ Output Plots
+
 1.Actual vs Predicted Sales plot is generated for visual evaluation of prediction performance.
+
 2.Prediction lines follow the trend but may miss some peaks or drops.
 
 ## 🚀 How to Improve Accuracy
 Here are several ways to improve the model performance:
+
 ✅ Feature Engineering
+
 1.Include more lag features (e.g., 7, 14, 30-day lags).
+
 2.Add rolling averages or exponential moving averages.
+
 3.Include day of the week, month, or is_weekend as features.
+
 4.Incorporate promotion/discount information (if available).
+
 5.Include seasonal decomposition components.
 
 ✅ Model Enhancements
 1.Use Hyperparameter Tuning with GridSearchCV or Optuna to optimize max_depth, n_estimators, learning_rate.
+
 2.Try other models like:
-3.LSTM or Prophet for capturing time-series seasonality.
-4.LightGBM or CatBoost for structured boosting.
-5.Use stacking ensemble to combine predictions from multiple models.
+
+LSTM or Prophet for capturing time-series seasonality.
+
+LightGBM or CatBoost for structured boosting.
+
+Use stacking ensemble to combine predictions from multiple models.
 
 ✅ Data Improvements
+
 1.Remove outliers or smooth sudden spikes using rolling medians.
+
 2.Ensure stationarity by differencing or using log/sqrt transforms.
 
 ✅ Validation
+
 1.Use TimeSeriesSplit instead of simple train-test split for better evaluation.
+
 2.Try cross-validation on time slices.
 
 
